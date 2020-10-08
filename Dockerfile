@@ -1,10 +1,9 @@
-FROM hayd/alpine-deno:1.4.4
+FROM hayd/alpine-deno
 
 WORKDIR /app
 USER deno
-ENV PORT=${PORT:-8080}
 
-EXPOSE ${PORT}
+EXPOSE $PORT
 
 COPY . .
 RUN deno cache src/index.js
