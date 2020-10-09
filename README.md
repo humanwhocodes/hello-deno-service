@@ -6,7 +6,7 @@ If you find this useful, please consider supporting my work with a [donation](ht
 
 ## Description
 
-A simple [Deno](https://deno.land/) server intended to serve as an example of deploying a Node.js application to [Google Cloud Run](https://cloud.google.com/run/).
+A simple [Deno](https://deno.land/) server intended to serve as an example of deploying a Deno application to [Google Cloud Run](https://cloud.google.com/run/).
 
 ## Usage
 
