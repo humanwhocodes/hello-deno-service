@@ -14,12 +14,13 @@ import { serve } from "https://deno.land/std@0.74.0/http/server.ts";
 //-----------------------------------------------------------------------------
 
 const PORT = Deno.env.get("PORT") || 8080;
+const HOST = "0.0.0.0";
 
 //-----------------------------------------------------------------------------
 // Server
 //-----------------------------------------------------------------------------
 
-const server = serve({ port: PORT });
+const server = serve(`${ HOST }:${ PORT }`);
 console.log(`HTTP webserver running.  Access it at:  http://${ HOST }:${ PORT }/`);
 
 for await (const request of server) {
