@@ -1,9 +1,7 @@
-FROM hayd/alpine-deno
+FROM hayd/alpine-deno:1.4.4
 
 WORKDIR /app
 USER deno
-
-EXPOSE $PORT
 
 COPY . .
 RUN deno cache src/index.js
