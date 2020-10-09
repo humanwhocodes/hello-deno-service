@@ -18,6 +18,12 @@ $ deno run --allow-net --allow-env src/index.js
 
 Locally, this will run the server on http://localhost:8080.
 
+To use the Docker container, run:
+
+```
+$ docker build -t app . && docker run -it --init -p 8080:8080 -e PORT=8080 app
+```
+
 ## Notes
 
 1. The server reads from the `PORT` environment variable to determine which port to listen on. This is important because Google Cloud Run defines this variable and it's the only port that will be open.
